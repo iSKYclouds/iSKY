@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Book Your Installation | ISKY</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0f1115;
+    color:white;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(circle at top right,
+      rgba(50,90,255,.15),
+      transparent 35%);
+    pointer-events:none;
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.card{
+    background:#171b24;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:25px;
+    box-shadow:0 0 25px rgba(0,0,0,.25);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#b8c1d1;
+    margin-bottom:40px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    margin-top:18px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#232937;
+    color:white;
+    box-sizing:border-box;
+}
+
+textarea{
+    min-height:120px;
+}
+
+.deposit-box{
+    border:1px solid rgba(77,166,255,.25);
+    background:rgba(77,166,255,.06);
+}
+
+.deposit-title{
+    font-size:1.2rem;
+    margin-bottom:12px;
+}
+
+.cashapp-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:14px 28px;
+    background:#00d632;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.submit-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:#4da6ff;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>Schedule Your Installation</h1>
+
+<p class="subtitle">
+Choose a date and time that works best for you.
+</p>
+
+<form action="https://formspree.io/f/xnjwopnw" method="POST">
+
+<div class="card">
+
+<label>Full Name</label>
+<input type="text" name="name" required>
+
+<label>Phone Number</label>
+<input type="tel" name="phone" required>
+
+<label>Email Address</label>
+<input type="email" name="email" required>
+
+<label>Which Area of New Jersey?</label>
+<select name="location" required>
+<option value="">Select One</option>
+<option>South Jersey</option>
+<option>Central Jersey</option>
+<option>North Jersey</option>
+</select>
+
+</div>
+
+<div class="card">
+
+<label>Select Installation Date</label>
+<input type="date" name="date" required>
+
+<label>Select Time Slot</label>
+<select name="time" required>
+<option value="">Select Time</option>
+<option>8:00 AM</option>
+<option>9:00 AM</option>
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>12:00 PM</option>
+<option>1:00 PM</option>
+<option>2:00 PM</option>
+</select>
+
+<label>Ceiling Size</label>
+<select name="ceiling">
+<option>Small</option>
+<option>Medium</option>
+<option>Large</option>
+</select>
+
+<label>Additional Notes</label>
+<textarea name="notes"></textarea>
+
+</div>
+
+<div class="card deposit-box">
+
+<div class="deposit-title">
+Secure Your Appointment
+</div>
+
+<p>
+To reserve your preferred installation date and allow us
+to plan materials and scheduling, a $50 booking deposit
+is required. This deposit is applied toward your final
+installation cost.
+</p>
+
+<!-- REPLACE WITH YOUR CASH APP LINK -->
+<a href="https://cash.app/$YOURCASHTAG"
+target="_blank"
+class="cashapp-btn">
+Pay $50 Deposit
+</a>
+
+</div>
+
+<button class="submit-btn" type="submit">
+Request Appointment
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
